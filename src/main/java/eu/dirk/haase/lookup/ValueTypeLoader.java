@@ -142,8 +142,6 @@ import java.util.function.Function;
  * response code (HTTP 404) along with the HTML error page.
  *
  * @param <V1> The type of the valueFactoryClass to be loaded by this loader
- * @author Mark Reinhold
- * @since 1.6
  */
 
 public final class ValueTypeLoader<V1>
