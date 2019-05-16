@@ -5,7 +5,10 @@ import java.net.URL;
 import java.security.AccessControlContext;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.NoSuchElementException;
 import java.util.function.Function;
 
 class LazyIterator<V1> implements Iterator<Function<String, V1>> {
@@ -32,7 +35,7 @@ class LazyIterator<V1> implements Iterator<Function<String, V1>> {
         this.loader = loader;
     }
 
-     public boolean hasNext() {
+    public boolean hasNext() {
         if (acc == null) {
             return hasNextValueFactory();
         } else {
