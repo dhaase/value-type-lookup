@@ -2,7 +2,7 @@ package eu.dirk.haase.lookup;
 
 import java.net.URL;
 
-class ValueTypeLoaderError extends Error {
+public class ValueTypeLoaderError extends Error {
 
     private static final long serialVersionUID = 0L;
 
